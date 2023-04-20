@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         backgroundColor: '#fff'
       }} className='Linksprops'>
 
-      <Link href={'/eventos'} className='Linksprops'>      Proximos Eventos </Link>
+      <Link href={'/eventos/Plaza de la Revolucion'} className='Linksprops'>      Proximos Eventos </Link>
       <Link href={'/compra-venta'} className='Linksprops'> Compra Venta </Link>
       <Link href={'/about'} className='Linksprops'>        Acerca de </Link>
       </nav>
