@@ -9,7 +9,6 @@ function InputEffect({children, municipality}) {
   
    function handleChange(ev) {
     setMunicipio(ev.target.value)
-    console.log(ev.target.value)
   }  
  
   return (

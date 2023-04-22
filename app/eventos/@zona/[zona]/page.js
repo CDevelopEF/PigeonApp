@@ -21,7 +21,7 @@ async function ZonaEvento({params}) {
         minHeight: '100vh'
     }}>
   <h1>Evento en {zona.replaceAll('%20', ' ')}</h1>
-      <p> {data.nombre}</p>
+      <p> { data.nombre}</p>
   </div>
   )
 }
