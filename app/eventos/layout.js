@@ -1,9 +1,10 @@
+import { getProducts } from '@/services/getProducts';
 import InputEffect from './InputEffect'
 
 
-export default function RootLayout({ children, zona }) {
-    const elementos = ['Alamar','Plaza de la Revolucion','Marianao','Cerro','Arroyo Naranjo','Habana Vieja','La Lisa','Cotorro','Regla','Guanabacoa','San Miguel del Padron','Cardenas','Cienfuegos','Villa Clara','SSpiritus','Camaguey','Tunas','Santiago','vrtientes'];
-
+export default async function RootLayout({ children, zona }) {
+    const elementos1 = ['Alamar','Plaza de la Revolucion','Marianao','Cerro','Arroyo Naranjo','Habana Vieja','La Lisa','Cotorro','Regla','Guanabacoa','San Miguel del Padron','Cardenas','Cienfuegos','Villa Clara','SSpiritus','Camaguey','Tunas','Santiago','vrtientes'];
+    const elementos = await getProducts();
   return (
     <div style={{
         display: 'flex',
@@ -17,7 +18,8 @@ export default function RootLayout({ children, zona }) {
             top: '0',
             position: 'sticky',
             backgroundColor: '#111',
-            maxHeight: '100vh'
+            maxHeight: '100vh',
+            maxWidth: '20vw'
 
         }}>
         

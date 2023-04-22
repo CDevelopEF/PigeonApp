@@ -1,12 +1,19 @@
 // Esta pagina se renderiza al lado derecho de la vista. recibiendo como parametro la zona que es linkeada desde otro componente
+'use client'
 
 import { getData } from "@/services/getDataFromSV";
-
+import { getEspecificProduct } from "@/services/getProducts";
+import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
+import Image
+ from "next/image";
+ import Style from './card.module.css'
+import CardComponent from "./Card";
 async function ZonaEvento({params}) {
   const { zona } = params;
+  
   let data = {}
   try {
-    data = await getData();
+    data = await getEspecificProduct(zona);
   } catch (err ) {
     console.log(err)
   }
@@ -18,10 +25,13 @@ async function ZonaEvento({params}) {
         marginRight: '15vw',
         backgroundColor: '#111',
         color: '#fff',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        
     }}>
-  <h1>Evento en {zona.replaceAll('%20', ' ')}</h1>
-      <p> { data.nombre}</p>
+  <h1>{ data.title}</h1> 
+      <CardComponent description={data.description} price={data.price} title={data.title} className={Style.card}>
+        <Image src={data.image}  height={450} width={450} alt={data.title}/>
+      </CardComponent>
   </div>
   )
 }

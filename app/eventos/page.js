@@ -4,6 +4,7 @@ import InputEffect from "./InputEffect";
 
 function EventosPage() {
   // Se puede hacer fetch al servidor para obtener lista de municipios o darselos manualmente
+  
   const elementos = ['Alamar','Plaza de la Revolucion','Marianao','Cerro','Arroyo Naranjo','Habana Vieja','La Lisa','Cotorro','Regla','Guanabacoa','San Miguel del Padron','Cardenas','Cienfuegos','Villa Clara','SSpiritus','Camaguey','Tunas','Santiago','vrtientes'];
 
   return (

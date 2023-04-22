@@ -33,9 +33,9 @@ function InputEffect({children, municipality}) {
         <div style={{ overflow: 'scroll', overflowX: 'hidden', padding: '0.2rem', maxHeight: '100vh' }}>
          <ul>
             {municipality
-            .filter((element) => element.toLowerCase().match(municipio.toLowerCase()))
-            .map((element) => <li key={element} style={{color: '#fff', padding: '10px'}}>
-            <Link href={`/eventos/${element}`}>{element}</Link></li>)}
+            .filter((element) => element.title.toLowerCase().match(municipio.toLowerCase()))
+            .map((element) => <li key={element.id} style={{color: '#fff', padding: '10px'}}>
+            <Link href={`/eventos/${element.id}`}>{element.title}</Link></li>)}
          </ul>
         </div>
             
